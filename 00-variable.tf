@@ -55,24 +55,6 @@ variable "enable_monitoring" {
   default = true
 }
 
-variable "enabled_metrics" {
-  default = [
-    "GroupDesiredCapacity",
-    "GroupInServiceCapacity",
-    "GroupInServiceInstances",
-    "GroupMaxSize",
-    "GroupMinSize",
-    "GroupPendingCapacity",
-    "GroupPendingInstances",
-    "GroupStandbyCapacity",
-    "GroupStandbyInstances",
-    "GroupTerminatingCapacity",
-    "GroupTerminatingInstances",
-    "GroupTotalCapacity",
-    "GroupTotalInstances",
-  ]
-}
-
 variable "enable_spot" {
   type    = bool
   default = false
@@ -106,6 +88,11 @@ variable "min" {
 variable "max" {
   type    = number
   default = 5
+}
+
+variable "max_unavailable_percentage" {
+  type    = number
+  default = 20
 }
 
 variable "key_name" {

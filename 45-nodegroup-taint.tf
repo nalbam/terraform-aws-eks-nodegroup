@@ -1,7 +1,7 @@
 # node_group
 
-resource "aws_eks_node_group" "worker" {
-  count = var.enable_taints ? 0 : 1
+resource "aws_eks_node_group" "worker-taint" {
+  count = var.enable_taints ? 1 : 0
 
   node_group_name_prefix = format("%s-", local.worker_name)
 
@@ -19,6 +19,12 @@ resource "aws_eks_node_group" "worker" {
   instance_types = var.instance_types
 
   labels = local.node_labels_map
+
+  taint = {
+    effect = "NO_SCHEDULE"
+    key    = "group"
+    value  = var.name
+  }
 
   scaling_config {
     desired_size = var.min
