@@ -25,10 +25,10 @@
 | enable\_monitoring | n/a | `bool` | `true` | no |
 | enable\_spot | n/a | `bool` | `false` | no |
 | enable\_taints | n/a | `bool` | `false` | no |
-| enabled\_metrics | n/a | `list` | <pre>[<br>  "GroupDesiredCapacity",<br>  "GroupInServiceCapacity",<br>  "GroupInServiceInstances",<br>  "GroupMaxSize",<br>  "GroupMinSize",<br>  "GroupPendingCapacity",<br>  "GroupPendingInstances",<br>  "GroupStandbyCapacity",<br>  "GroupStandbyInstances",<br>  "GroupTerminatingCapacity",<br>  "GroupTerminatingInstances",<br>  "GroupTotalCapacity",<br>  "GroupTotalInstances"<br>]</pre> | no |
 | instance\_types | n/a | `list(string)` | `[]` | no |
 | key\_name | n/a | `string` | `"eks_user"` | no |
 | max | n/a | `number` | `5` | no |
+| max\_unavailable\_percentage | n/a | `number` | `20` | no |
 | min | n/a | `number` | `1` | no |
 | name | Name of the worker. e.g: worker | `string` | n/a | yes |
 | node\_labels | n/a | `map(string)` | `{}` | no |
