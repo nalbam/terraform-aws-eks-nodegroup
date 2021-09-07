@@ -20,7 +20,7 @@ resource "aws_eks_node_group" "worker-taint" {
 
   labels = local.node_labels_map
 
-  taint = {
+  taint {
     effect = "NO_SCHEDULE"
     key    = "group"
     value  = var.name
