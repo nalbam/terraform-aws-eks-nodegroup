@@ -1,5 +1,8 @@
 # terraform-aws-eks-nodegroup
 
+[![build](https://img.shields.io/github/workflow/status/nalbam/terraform-aws-eks-nodegroup/build?label=build&style=for-the-badge&logo=github)](https://github.com/nalbam/terraform-aws-eks-nodegroup/actions/workflows/push.yaml)
+[![release](https://img.shields.io/github/v/release/nalbam/terraform-aws-eks-nodegroup?style=for-the-badge&logo=github)](https://github.com/nalbam/terraform-aws-eks-nodegroup/releases)
+
 <!--- BEGIN_TF_DOCS --->
 ## Requirements
 
