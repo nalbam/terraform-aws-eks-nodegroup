@@ -11,7 +11,7 @@ resource "aws_eks_node_group" "worker-taint" {
 
   launch_template {
     id      = aws_launch_template.worker.id
-    version = "$Latest"
+    version = aws_launch_template.worker.latest_version
   }
 
   capacity_type  = var.enable_spot ? "SPOT" : "ON_DEMAND"
