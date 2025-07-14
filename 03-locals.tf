@@ -32,12 +32,9 @@ locals {
   tags = merge(
     var.tags,
     {
-      "Name"                                        = local.worker_name
-      "KubernetesCluster"                           = var.cluster_name
+      "Name"                                      = local.worker_name
+      "KubernetesCluster"                         = var.cluster_name
       "kubernetes.io/cluster/${var.cluster_name}" = "owned"
-      "krmt.io/group"                               = var.name
-      "krmt.io/subgroup"                            = local.subgroup
-      "krmt.io/instancegroup"                       = local.fullname
     },
   )
 }
